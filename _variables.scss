@@ -1,0 +1,26 @@
+@use 'functions'as *;
+
+ $primary-color:#7d1474;
+$btn-color:#0080ff;
+$back-color:#f4f2f2;
+
+@mixin background-color($color){
+    background-color: $color;
+    color:text-colors($color) ;
+}
+
+
+//  do this for create your framework for styling
+$steps:(1,2,3,4,5);
+
+@each $step in $steps{
+    .my-#{$step}{
+        margin: #{$step*10Px};
+    }
+    .mx-#{$step}{
+     margin: $step*10px 0;
+    }
+    .p-#{$step}{
+        padding: $step*10px;
+    }
+}
